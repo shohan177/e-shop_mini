@@ -2,7 +2,7 @@
 <?php require_once "app/function.php" ?>
 <!DOCTYPE html>
 <html lang="en">
-
+<!-- modify by sarwar jahan shohan -->
   
 <!-- Mirrored from themes.hody.co/html/comet/shop-4col.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 11 Jan 2017 09:51:09 GMT -->
 <head>
@@ -555,11 +555,22 @@
           $data = $connection -> query($sql);
         
           while($fdata = $data -> fetch_assoc()):  
-        
+          
+          if (empty($fdata['special_price'])) {
+           
+            $regular = $fdata['regular_price'];
+            $special = $fdata['regular_price'];
+            
+
+          }else{
+
+            $regular = $fdata['regular_price'];
+            $special = $fdata['special_price'];
+          }
           
           ?>
 
-
+        
       
 
 
@@ -575,8 +586,8 @@
               </div>
               <div class="product-info">
                 <h4 class="upper"><a href="#"><?php echo $fdata['name'] ?></a></h4>
-                <span><del><?php echo $fdata['regular_price'] ?> TK</del></span><br>
-                <span><?php echo $fdata['special_price'] ?> TK</span>
+                <span><del><?php echo $regular ?> TK</del></span><br>
+                <span><?php echo $special ?> TK</span>
                 <div class="save-product"><a href="#"><i class="icon-heart"></i></a>
                 </div>
               </div>

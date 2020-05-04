@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  
+<!-- modify by sarwar jahan shohan -->  
 <!-- Mirrored from themes.hody.co/html/comet/shop-single.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 11 Jan 2017 09:51:25 GMT -->
 <head>
     <title>Comet | Creative Multi-Purpose HTML Template</title>
@@ -473,6 +473,19 @@
          $data = $connection -> query($sql);
          $fdata = $data -> fetch_assoc();
 
+         if (empty($fdata['special_price'])) {
+           
+            $regular = $fdata['regular_price'];
+            $special = $fdata['regular_price'];
+            
+
+          }else{
+
+            $regular = $fdata['regular_price'];
+            $special = $fdata['special_price'];
+          }
+          
+
         ?>
         <div class="single-product-details">
           <div class="row">
@@ -502,8 +515,8 @@
               <div class="single-product-price">
                 <div class="row">
                   <div class="col-xs-6">
-                    <h3><del><span><?php echo $fdata['regular_price'] ?> TK</span></del></br>
-                      <span><?php echo $fdata['special_price'] ?> TK</span></h3>
+                    <h3><del><span><?php echo $regular ?> TK</span></del></br>
+                      <span><?php echo $special ?> TK</span></h3>
                   </div>
                   <div class="col-xs-6 text-right"><span class="rating-stars">              <i class="ti-star full"></i><i class="ti-star full"></i><i class="ti-star full"></i><i class="ti-star full"></i><i class="ti-star"></i><span class="hidden-xs">(3 Reviews)</span></span>
                   </div>

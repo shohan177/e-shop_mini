@@ -5,6 +5,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Add product</title>
+<!-- creater sarwar jahan shohan -->
 
 	
 	<link rel="stylesheet" href="asset/css/bootstrap.min.css">
@@ -36,7 +37,7 @@
 			$catagory = $_POST['ct'];
 	
 
-		if(empty($name)||empty($bran)||empty($model)||empty($rprice)||empty($sprice)||empty($discription)||empty($catagory)){
+		if(empty($name)||empty($bran)||empty($model)||empty($rprice)||empty($discription)||empty($catagory)){
 			$name = "swt";
 			$mess= '<p class="alert alert-danger alert-dismissible fade show">Data fild is empty <button type="button" class="close" data-dismiss="alert" aria-label="Close">
 				    <span aria-hidden="true">&times;</span>
@@ -138,7 +139,7 @@
 	  			    <div class="input-group-prepend">
 	    				<span class="input-group-text" id="basic-addon1">Spacial Price</span>
 	  			    </div>
-  				<input type="text" name="sprice" class="form-control" placeholder="" value="<?php old('sprice')?>" aria-describedby="basic-addon1">
+  				<input type="text" name="sprice" class="form-control" placeholder="Can be empty" value="<?php old('sprice')?>" aria-describedby="basic-addon1">
   				  <div class="input-group-append">
 	    				<span class="input-group-text">TK</span>
 	 				</div>

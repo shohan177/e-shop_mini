@@ -44,7 +44,7 @@
 			$Photo_name = $pArra['file_name'];
 		}
 
-		if(empty($name)||empty($bran)||empty($model)||empty($rprice)||empty($sprice)||empty($discription)||empty($catagory)){
+		if(empty($name)||empty($bran)||empty($model)||empty($rprice)||empty($discription)||empty($catagory)){
 			$mess= '<p class="alert alert-danger alert-dismissible fade show">Data fild is empty <button type="button" class="close" data-dismiss="alert" aria-label="Close">
 				    <span aria-hidden="true">&times;</span>
 				  </button></p>';
@@ -141,7 +141,7 @@
 	  			    <div class="input-group-prepend">
 	    				<span class="input-group-text" id="basic-addon1">Spacial Price</span>
 	  			    </div>
-  				<input type="text" name="sprice" class="form-control" placeholder="" 
+  				<input type="text" name="sprice" class="form-control" placeholder="Can be empty" 
   				value="<?php echo $edit_data['special_price']; ?>" aria-describedby="basic-addon1">
   				  <div class="input-group-append">
 	    				<span class="input-group-text">TK</span>
